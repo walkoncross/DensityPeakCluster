@@ -24,7 +24,7 @@ def plot_scatter_diagram(which_fig, x, y, x_label = 'x', y_label = 'y', title = 
 	plt.figure(which_fig)
 	plt.clf()
 	if style_list == None:
-		plt.plot(x, y, color=styles[0], linestyle='.', marker='.')
+		plt.plot(x, y, color=styles[0], linestyle=':', marker='.')
 	else:
 		clses = set(style_list)
 		xs, ys = {}, {}
@@ -42,7 +42,7 @@ def plot_scatter_diagram(which_fig, x, y, x_label = 'x', y_label = 'y', title = 
 				added = 0
 			else:
 				style = styles[idx + added]
-			plt.plot(xs[cls], ys[cls], color=style, linestyle='.', marker='.')
+			plt.plot(xs[cls], ys[cls], color=style, linestyle=':', marker='.')
 	plt.title(title)
 	plt.xlabel(x_label)
 	plt.ylabel(y_label)
